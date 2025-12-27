@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>✅ To-Do List</h1>
+      <p class="subtitle">Organize suas tarefas com estilo. <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema"> 🌙 </button></p>
+    </header>
+
+    <section class="card">
+      <form id="todo-form" class="form">
+        <input id="todo-input" type="text" placeholder="Digite uma tarefa e aperte Enter..." autocomplete="off" />
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <div class="toolbar">
+        <div class="filters" role="tablist" aria-label="Filtros de tarefas">
+          <button class="filter active" data-filter="all" type="button">Todas</button>
+          <button class="filter" data-filter="active" type="button">Pendentes</button>
+          <button class="filter" data-filter="done" type="button">Concluídas</button>
+        </div>
+
+        <div class="meta">
+          <span id="counter">0 tarefas</span>
+          <button id="clear-done" type="button" class="link-btn">Limpar concluídas</button>
+        </div>
+      </div>
+
+      <ul id="todo-list" class="list" aria-label="Lista de tarefas"></ul>
+
+      <p id="empty" class="empty">Nenhuma tarefa ainda. Adicione a primeira! ✨</p>
+    </section>
+
+    <footer class="footer">
+      <small>Feito por você • HTML/CSS/JS • LocalStorage</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
